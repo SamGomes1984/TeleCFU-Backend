@@ -9,7 +9,7 @@ services:
         sync: true
       - key: GOOGLE_APPLICATION_CREDENTIALS
         value: /etc/secrets/telecfu-firebase-adminsdk-slozh-b4e0dcaa8b.json
-- files:
+files:
   - path: /etc/secrets/telecfu-firebase-adminsdk-slozh-b4e0dcaa8b.json
     contents: |-
       {
