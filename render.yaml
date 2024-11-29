@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: TeleCFU-Backend
+    env: node
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: true
+      - key: GOOGLE_APPLICATION_CREDENTIALS
+        value: /etc/secrets/telecfu-firebase-adminsdk-slozh-b4e0dcaa8b.json
+files:
+  - path: /etc/secrets/telecfu-firebase-adminsdk-slozh-b4e0dcaa8b.json
+    contents: |-
+      {
+        "type": "service_account",
+        "project_id": "telecfu",
+        "private_key_id": "b4e0dcaa8b6ea211636b888e74fc4c31bcefb13c",
+        "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCz/Udc2EX1j+rp\n6+WJWjgKB9t+Ib6NjLV4Ba1RDiHSQo+KpJvZbb7MRFFl+Ul2aNvb1+kn+5+2QgFr\nkE8qExrVny1Ednyi1nGT9V1jBVFEd1Cr3aMGgb5W5xYbkrsRHWsPUuA+nmNqbtYy\nZHqBgPdhuKh5an9hNjq1M07jRugH7JoPEz5FgG0poF2GH2dmP8K7bO3Di+oQVqPy\nKd8ExJ90o/8hOqpgO42q6RZbWEBsx55cQGByyGwnDONEpsqHz+tbx1jj2Ih4q548\nCI9gcHGBbmIZaR/138P9HrpOoGSEeCaEzSy9DrSXlFR+3qRgYf2a15YVgawGP1hd\njt+Q6cWFAgMBAAECggEADBvZBjUCl9+jxTL6kUABjyMyMA0jHbC+sKFpJI/X1KZn\ns8MZPQp2EJX0B/E6cP3i9KpU5Dy4ZPGR2OOvf7wjTQXVbMqv3eChaXvTWYsNCZch\nVT6m7hQicwQ+54H6lc8t2a0QqwXK2Gk2fdNmrnm3qtpaczin8ylLz87w2rd1erri\nG+ySlyEBuefIaoH2tu4qAHwiQfEQ/1W9l16/12tiLaxkL1Raj2sNosnZJYir4CGD\nREWBy/HCOJveEA/9Sj/65ySFyBvkIQRSQqz9OVH7V0DHjNlQXeWKyldlvxQqvoIz\n/51uLwh5yqJdSPKd0VopoGzUY8agI6TbDuGFd+bI4QKBgQDwt9a+azaPp/F3p5DF\nMvZghMtGqoocmCMBMrRLmBUGjrwrjkAyCoWR1tyKmku1xRGIm6CHF4HyhqJyCV5l\nk5Ged4YTU4lPiWjBiKR+BivMfRaRNVmeavXg0TXfP3GnepIShwOcP/hE4MkwrrXJ\n1SBAi3FyPqqsMbdrIjoZkjIf3QKBgQC/anlC9j2BmQ2UgZN/fBrSLeoDpVOd815f\n2lKcEO7oyh5MPtBSm2iy2izy6PLpe8sFzDEtSh1MfYPG4O8DzPogHi1cSaps9uY8\nRc+49nIgrXlFj6UQXZJYsqm8brOJ9kbIHQ72IU9KUKbMD81rAbTg95EPMRGl3/g8\n6NkULm41yQKBgH2nWT9487g1cISHQbjOi3GCoCG5L/MRL2SWtSqoroEHzQ3naXc1\nqtegEut+83pk7mwi4L7j9H9G7FEettnLGD5iIejAuHJ+ReKQk1z9l6tcuIUAFlHt\nf3/ldXudwJQuFUX6mFXdxpkdxafV6yr6R6WppISAVdMg+J/B9BYZDHU5AoGAMFOP\nXeqRSMD9frrgJFWO5/WTmWwKGlyxPP3/0UstJjSxRYquSczWuCEBLCrH+U65yTLu\nT4LgtskRlgqADbOYirdTuHMYxf3nztvJP+dolPt3HKrRf7pAEoi49cv1JCW7ZRaB\nCn8KZ7bJBcgPkq6RniKiyvUWgYx0PdyDweafCJECgYBhA0DdZRt4gblRc+mCRex6\nEtp5z52Dv/jtL7/Ouf7gq1RaojcaTcQyaWZ/RtkKn9vgov+gCjD7sXk+fxBIs7NN\nhbx3sS7NEFXVxAHS980KXSQPrO4kUkhmyiyIvF3AocLi2U7jwYkToQYtHZTbkwIL\nPDSNbXk4or/pXNud0HFnlw==\n-----END PRIVATE KEY-----\n",
+        "client_email": "firebase-adminsdk-slozh@telecfu.iam.gserviceaccount.com",
+        "client_id": "113407346761583704345",
+        "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+        "token_uri": "https://oauth2.googleapis.com/token",
+        "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+        "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-slozh%40telecfu.iam.gserviceaccount.com"
+      }
